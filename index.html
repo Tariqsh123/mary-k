@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mary K Espinosa | Shattered Roots to Stronger Wings</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Elegant serif + modern sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFFFFF;
+      color: #1E1A2F;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .logo-text, .hero-title, .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* ----- STICKY NAVBAR (clean, no icons) ----- */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      border-bottom: 1px solid rgba(106, 61, 154, 0.15);
+      padding: 0.9rem 2rem;
+      transition: all 0.3s;
+    }
+
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Logo with tree/butterfly concept - enhanced */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+    .logo-icon {
+      background: linear-gradient(135deg, #6A3D9A, #2A9D8F);
+      width: 46px;
+      height: 46px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 20px rgba(106, 61, 154, 0.25);
+      transition: transform 0.3s ease;
+    }
+    .logo-icon:hover {
+      transform: scale(1.03);
+    }
+    .logo-icon i {
+      font-size: 1.9rem;
+      color: white;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+    .logo-text {
+      font-size: 1.55rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #6A3D9A, #2A9D8F);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+
+    /* Desktop menu (without icons) */
+    .nav-menu {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-link {
+      text-decoration: none;
+      font-weight: 500;
+      color: #2D2A3E;
+      font-size: 1rem;
+      position: relative;
+      padding-bottom: 6px;
+    }
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(90deg, #6A3D9A, #2A9D8F);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    .nav-link:hover {
+      color: #6A3D9A;
+    }
+
+    /* mobile menu */
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #6A3D9A;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 2.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #6A3D9A, #2A9D8F);
+      color: white;
+      box-shadow: 0 8px 18px rgba(106, 61, 154, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 28px rgba(42, 157, 143, 0.35);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      backdrop-filter: blur(5px);
+    }
+    .btn-outline:hover {
+      background: white;
+      color: #6A3D9A;
+      border-color: white;
+      transform: translateY(-4px);
+    }
+    .section-title {
+      font-size: 2.8rem;
+      margin-bottom: 2rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #6A3D9A, #2A9D8F);
+      border-radius: 4px;
+    }
+    section {
+      padding: 5.5rem 0;
+    }
+
+    /* HERO with new background */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, rgba(30, 26, 47, 0.75), rgba(42, 157, 143, 0.55)), url('https://www.thetilt.com/wp-content/uploads/2022/09/book-publishing-feature.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero-content {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 2rem;
+      animation: fadeInUp 1s cubic-bezier(0.2, 0.9, 0.4, 1.1) forwards;
+    }
+    .hero-title {
+      font-size: 4.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 5px 25px rgba(0,0,0,0.3);
+      letter-spacing: -0.02em;
+    }
+    .hero-sub {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 400;
+      letter-spacing: -0.2px;
+    }
+    .hero-author {
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+      opacity: 0.95;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* About section with new image */
+    .about-grid {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+    .about-img {
+      flex: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 30px 40px -20px rgba(0,0,0,0.2);
+      transition: all 0.4s;
+    }
+    .about-img img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .about-img:hover img {
+      transform: scale(1.02);
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-icons {
+      display: flex;
+      gap: 10px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .icon-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #F3F0EA;
+      padding:  10px;
+      border-radius: 60px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .icon-item i {
+      font-size: 1.3rem;
+      color: #6A3D9A;
+    }
+    .icon-item:hover {
+      transform: translateY(-3px);
+      background: #E9E2D8;
+    }
+
+    /* Book card section with glow & shadow */
+    .book-card {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(4px);
+      max-width: 750px;
+      margin: 0 auto;
+      border-radius: 56px;
+      padding: 2.8rem 2.5rem;
+      box-shadow: 0 40px 60px -20px rgba(0, 0, 0, 0.2);
+      transition: all 0.4s;
+      border: 1px solid rgba(106, 61, 154, 0.2);
+      text-align: center;
+    }
+    .book-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 50px 70px -25px rgba(106, 61, 154, 0.4);
+      border-color: #2A9D8F;
+    }
+    .book-title {
+      font-size: 2.5rem;
+      margin: 0.8rem 0 1rem;
+      background: linear-gradient(135deg, #2D2A3E, #6A3D9A);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .buy-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .buy-btn {
+      background: linear-gradient(135deg, #6A3D9A, #2A9D8F);
+      color: white;
+      padding: 0.7rem 1.4rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.25s;
+    }
+    .buy-btn:hover {
+      transform: scale(1.02);
+      background: #2A9D8F;
+      box-shadow: 0 5px 15px rgba(42,157,143,0.4);
+    }
+
+    /* Contact + Newsletter */
+    .contact-form, .newsletter-box {
+      background: white;
+      padding: 0;
+      border-radius: 48px;
+      box-shadow: 0 25px 40px -15px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .form-group i {
+      position: absolute;
+      left: 20px;
+      top:25px;
+      transform: translateY(-50%);
+      color: #6A3D9A;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.9rem 1rem 0.9rem 3rem;
+      border: 1px solid #E2DCD5;
+      border-radius: 60px;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: 0.2s;
+    }
+    textarea {
+      border-radius: 32px;
+      resize: vertical;
+      padding-top: 1rem;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #6A3D9A;
+      box-shadow: 0 0 0 4px rgba(106, 61, 154, 0.1);
+    }
+    .newsletter-box {
+      text-align: center;
+      background: #FEFAF6;
+    }
+    .newsletter-box input {
+      /* max-width: 420px; */
+      margin: 0 auto 1.2rem;
+    }
+    @media(max-width:600px){
+      .form-group i {
+    left: 20px;
+    top: 25px;
+}
+    }
+    /* WHITE FOOTER */
+    footer {
+      background: #FFFFFF;
+      color: #2D2A3E;
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+      border-top: 1px solid rgba(106, 61, 154, 0.15);
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .social-icon {
+      color: #6A3D9A;
+      background: #F4F0EC;
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 1.35rem;
+      transition: 0.25s;
+      text-decoration: none;
+    }
+    .social-icon:hover {
+      background: #6A3D9A;
+      color: white;
+      transform: translateY(-5px);
+    }
+    .footer-links {
+      margin: 1.2rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: #4A4563;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .footer-links a:hover {
+      color: #2A9D8F;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 850px) {
+      .hamburger {
+        display: block;
+      }
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 74px;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+        padding: 2rem 0;
+        gap: 1.5rem;
+        border-radius: 0 0 28px 28px;
+        z-index: 999;
+      }
+      .nav-menu.active {
+        left: 0;
+      }
+      .hero-title {
+        font-size: 2.8rem;
+      }
+      .hero-sub {
+        font-size: 1.2rem;
+      }
+      .section-title {
+        font-size: 2.2rem;
+      }
+      .container {
+        padding: 0 1.5rem;
+      }
+      .about-grid {
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .book-card {
+        padding: 1.8rem;
+      }
+    }
+
+    /* additional animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <div class="logo-icon"><i class="fas fa-tree"></i><i class="fas fa-butterfly" style="font-size: 1.1rem; margin-left: -8px;"></i></div>
+      <span class="logo-text">Mary K Espinosa</span>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#book" class="nav-link">Book</a></li>
+      <li><a href="#buy" class="nav-link">Buy Now</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#newsletter" class="nav-link">Newsletter</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SECTION with new bg -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Shattered Roots <br>to Stronger Wings</h1>
+    <p class="hero-sub">A journey of resilience, healing, and transformation</p>
+    <p class="hero-author">Mary K Espinosa</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-primary"><i class="fas fa-feather-alt"></i> Read More</a>
+      <a href="#buy" class="btn btn-outline"><i class="fas fa-shopping-bag"></i> Buy Book</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION (new image: elegant woman reading) -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About the Author</h2>
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://img.freepik.com/free-vector/flat-illustration-iranian-woman-reading-book_23-2149825998.jpg?semt=ais_incoming&w=740&q=80" alt="Mary K Espinosa reading, healing through stories">
+      </div>
+      <div class="about-text">
+        <p style="font-size: 1.2rem; margin-bottom: 1.2rem; line-height: 1.5;">Author of <strong>Shattered Roots to Stronger Wings</strong>, sharing a powerful journey of resilience, healing, and transformation. Through deeply personal experiences including childhood trauma, neglect, and domestic violence survival, she raises awareness about healing and recovery. She is also a community outreach medical advocate and prevention educator.</p>
+        <div class="about-icons">
+          <span class="icon-item"><i class="fas fa-hand-holding-heart"></i> Healing</span>
+          <span class="icon-item"><i class="fas fa-heartbeat"></i> Resilience</span>
+          <span class="icon-item"><i class="fas fa-book-open"></i> Memoir</span>
+          <span class="icon-item"><i class="fas fa-shield-alt"></i> Empowerment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK SECTION -->
+<section id="book" style="background: #FEFAF6;">
+  <div class="container" style="text-align: center;">
+    <h2 class="section-title">Published Book</h2>
+    <div class="book-card">
+      <i class="fas fa-feather-alt" style="font-size: 3rem; color: #6A3D9A; opacity: 0.8;"></i>
+      <h3 class="book-title">Shattered Roots to Stronger Wings</h3>
+      <p style="font-size: 1.1rem; max-width: 500px; margin: 0 auto;">A powerful memoir of survival, healing, and transformation through trauma and resilience.</p>
+      <div class="buy-links" id="buy">
+        <a href="https://www.amazon.com/Shattered-Roots-Stronger-Wings-Espinosa/dp/B0DT77CGTT" target="_blank" class="buy-btn"><i class="fab fa-amazon"></i> Amazon</a>
+        <a href="https://www.barnesandnoble.com/w/shattered-roots-to-stronger-wings-mary-k-espinosa/1146898843" target="_blank" class="buy-btn"><i class="fas fa-store"></i> Barnes & Noble</a>
+        <a href="https://www.waterstones.com/book/shattered-roots-to-stronger-wings/mary-k-espinosa/9798230445777" target="_blank" class="buy-btn"><i class="fas fa-water"></i> Waterstones</a>
+        <a href="https://www.walmart.com/ip/Shattered-Roots-to-Stronger-Wings-Paperback-9798230445777/15158954566" target="_blank" class="buy-btn"><i class="fab fa-walmart"></i> Walmart</a>
+        <a href="https://www.takealot.com/shattered-roots-to-stronger-wings/PLID97250513" target="_blank" class="buy-btn"><i class="fas fa-shopping-cart"></i> Takealot</a>
+        <a href="https://www.indigo.ca/en-ca/shattered-roots-to-stronger-wings/6a476162-8772-3b7d-bcdb-5ab47b6f6e37.html" target="_blank" class="buy-btn"><i class="fas fa-leaf"></i> Indigo</a>
+        <a href="https://bookscape.com/product-details/shattered-roots-to-stronger-wings-9798230445777" target="_blank" class="buy-btn"><i class="fas fa-globe"></i> Bookscape</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email address" required>
+          </div>
+          <div class="form-group">
+            <i class="fas fa-pen-fancy"></i>
+            <textarea rows="4" id="message" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Send Message</button>
+          <p id="formFeedback" style="margin-top: 1rem; text-align: center;"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER SECTION -->
+<section id="newsletter" style="background: #F9F7F3;">
+  <div class="container">
+    <div class="newsletter-box">
+      <i class="fas fa-butterfly" style="font-size: 2.4rem; color: #2A9D8F; margin-bottom: 0.8rem;"></i>
+      <h3 style="font-size: 2rem;">Join the healing journey & updates</h3>
+      <p style="margin-bottom: 1.5rem;">Receive empowering stories, resilience resources & book news.</p>
+      <form id="newsletterForm" style="display: flex; flex-direction: column; align-items: center;">
+        <div class="form-group" style="width: 100%; max-width: 450px;">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="newsEmail" placeholder="Your email address" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="background: #2A9D8F;"><i class="fas fa-paper-plane"></i> Subscribe</button>
+        <small id="newsMsg" style="margin-top: 12px;"></small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- WHITE FOOTER -->
+<footer>
+  <div class="container">
+    <div class="social-links">
+      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-goodreads-g"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+    <p style="margin-top: 1rem;">&copy; 2026 Mary K Espinosa — Shattered Roots to Stronger Wings. All rights reserved.</p>
+    <p style="font-size: 0.8rem; margin-top: 0.3rem;"><i class="fas fa-tree"></i> resilience | healing | transformation <i class="fas fa-butterfly"></i></p>
+  </div>
+</footer>
+
+<script>
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('navMenu');
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Smooth scroll offset for sticky navbar
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#" || targetId === "") return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const offset = target.offsetTop - 80;
+        window.scrollTo({ top: offset, behavior: "smooth" });
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+
+  // Contact form
+  const contactForm = document.getElementById('contactForm');
+  const feedbackP = document.getElementById('formFeedback');
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    if (!name || !email || !message) {
+      feedbackP.innerHTML = '<span style="color:#C44536;"><i class="fas fa-exclamation-circle"></i> Please fill all fields.</span>';
+      return;
+    }
+    if (!email.includes('@')) {
+      feedbackP.innerHTML = '<span style="color:#C44536;">Valid email required.</span>';
+      return;
+    }
+    feedbackP.innerHTML = '<span style="color:#2A9D8F;"><i class="fas fa-check-circle"></i> Thank you, ' + name + '! Your message has been sent.</span>';
+    contactForm.reset();
+    setTimeout(() => { feedbackP.innerHTML = ''; }, 4000);
+  });
+
+  // Newsletter subscription
+  const newsForm = document.getElementById('newsletterForm');
+  const newsMsg = document.getElementById('newsMsg');
+  newsForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailInput = document.getElementById('newsEmail').value.trim();
+    if (!emailInput || !emailInput.includes('@')) {
+      newsMsg.innerHTML = '<span style="color:#C44536;">Please provide a valid email.</span>';
+      return;
+    }
+    newsMsg.innerHTML = '<span style="color:#2A9D8F;"><i class="fas fa-feather-alt"></i> Welcome to the healing journey! (demo)</span>';
+    document.getElementById('newsEmail').value = '';
+    setTimeout(() => { newsMsg.innerHTML = ''; }, 4000);
+  });
+
+  // Intersection Observer for fade-up animations
+  const fadeElements = document.querySelectorAll('.about-grid, .book-card, .contact-form, .newsletter-box');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('appear');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeElements.forEach(el => {
+    el.classList.add('fade-up');
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
