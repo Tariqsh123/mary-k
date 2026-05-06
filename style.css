@@ -390,10 +390,10 @@
     .social-icon {
       background: #F1EEEA; width: 48px; height: 48px; border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
-      color: #6A3D9A; font-size: 1.4rem; transition: 0.25s;
+      color: #2A9D8F; font-size: 1.4rem; transition: 0.25s;
       text-decoration: none;
     }
-    .social-icon:hover { background: #6A3D9A; color: white; transform: translateY(-5px); }
+    .social-icon:hover { background: #2A9D8F; color: white; transform: translateY(-5px); }
     .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.2rem; }
     .footer-links a { color: #4A4563; text-decoration: none; font-weight: 500; }
     .footer-links a:hover { color: #2A9D8F; }
@@ -717,5 +717,226 @@
 
   .about-page-hero-cta-text {
     font-size: 14px;
+  }
+}
+
+
+.excerpts-hero-section{
+  padding: 60px 10px;
+  padding-top: 120px;
+  height: fit-content;
+  background: linear-gradient(135deg, #2A9D8F, #1E1A2F);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.excerpts-hero-section h1{
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+
+.about-page-hero-excerpts-section {
+  padding: 60px 20px;
+}
+
+/* container */
+.about-page-hero-excerpts-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* GRID */
+.about-page-hero-excerpts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+/* CARD */
+.about-page-hero-excerpt-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE */
+.about-page-hero-excerpt-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.about-page-hero-excerpt-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* TITLE */
+.about-page-hero-excerpt-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.about-page-hero-excerpt-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* AUTHOR */
+.about-page-hero-excerpt-author {
+  font-size: 13px;
+  color: #2A9D8F;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* BUTTON */
+.about-page-hero-excerpt-btn {
+  margin-top: auto;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #2A9D8F;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: medium;
+}
+
+/* HOVER CARD */
+.about-page-hero-excerpt-card:hover {
+  transform: translateY(-6px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .about-page-hero-excerpts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page-hero-excerpts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.about-page-hero-genres-section {
+  padding: 60px 20px;
+}
+
+/* container */
+.about-page-hero-genres-container {
+  max-width: 1150px;
+  margin: auto;
+  text-align: center;
+}
+
+/* heading */
+.about-page-hero-genres-heading {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: #111;
+}
+
+/* GRID */
+.about-page-hero-genres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.about-page-hero-genre-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 25px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: #2a9d9023;
+  border: 2px solid #2A9D8F;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+  transition: 0.4s;
+}
+
+/* icon bubble */
+.about-page-hero-genre-card i {
+  font-size: medium;
+  color: #fff;
+  background: linear-gradient(90deg,#2A9D8F,#1E1A2F);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+/* title */
+.about-page-hero-genre-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111;
+  font-weight: 700;
+}
+
+/* text */
+.about-page-hero-genre-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* hover effect WOW */
+.about-page-hero-genre-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+}
+
+/* subtle background glow */
+.about-page-hero-genre-card::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 120px;
+  height: 120px;
+  background: #4CAF50;
+  opacity: 0.08;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .about-page-hero-genres-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-page-hero-genres-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page-hero-genres-heading {
+    font-size: 35px;
   }
 }
