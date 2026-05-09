@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+     <!-- Font Awesome 6 (ensure it loads) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+ 
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+  <div class="nav-container">
+    <div class="logo"><div class="logo-icon"><i class="fas fa-feather-alt"></i></div><span class="logo-text">Mary K Espinosa</span></div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="excerpts.html" class="nav-link">Excerpts</a></li><li><a href="books.html" class="nav-link">Book</a></li>
+      <li><a href="healing.html" class="nav-link">Healing</a></li>
+      <li><a href="contact-us.html" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="overlay-blur" id="overlayBlur"></div>
+<div class="side-menu" id="sideMenu">
+  <div class="close-menu" id="closeMenu"><i class="fas fa-times"></i></div>
+  <ul class="side-nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li><a href="excerpts.html">Excerpts</a></li><li><a href="about.html">Book</a></li>
+    <li><a href="healing.html">Healing</a></li><li><a href="contact-us.html">Contact</a></li>
+  </ul>
+</div>
+
+
+<section class="excerpts-hero-section">
+    <h1>Contact Us</h1>
+</section>
+
+<style>
+    .contact-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 95%;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding:0;
+      margin: 60px auto;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+
+    /* Left Side - Contact Info */
+    .contact-info {
+      background: linear-gradient(135deg, #2A9D8F, #1E1A2F);
+      color: white;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-header h2 {
+      font-size: 2.3rem;
+      margin-bottom: 12px;
+    }
+
+    .info-header p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    .info-content {
+      margin-top: 50px;
+      flex-grow: 1;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .info-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .info-text h4 {
+      font-size: 1.15rem;
+      margin-bottom: 5px;
+    }
+
+    .info-text p {
+      opacity: 0.9;
+      font-size: 1.05rem;
+    }
+
+    /* Right Side - Form */
+    .contact-form {
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-header h2 {
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #2A9D8F;
+      box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.15);
+    }
+
+    textarea.form-input {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      margin-top: 15px;
+      padding: 16px 32px;
+      background: #2A9D8F;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    /* Responsive */
+    @media (max-width: 992px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .contact-info, .contact-form {
+        padding: 40px 25px;
+      }
+    }
+    
+</style>
+
+<section class="contact-section">
+    <div class="contact-container">
+
+      <!-- Left Side: Contact Information -->
+      <div class="contact-info">
+        <div class="info-header">
+          <h2>Get in Touch</h2>
+          <p>We're here to help! Feel free to reach out.</p>
+        </div>
+
+        <div class="info-content">
+          
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="info-text">
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-text">
+              <h4>Email</h4>
+              <p>maryespinosa560@hotmail.com</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Side: Contact Form -->
+      <div class="contact-form">
+        <div class="form-header">
+          <h2>Send us a Message</h2>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" class="form-input" placeholder="John Doe" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" class="form-input" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" class="form-input" placeholder="+1 (555) 987-6543">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" class="form-input" placeholder="How can we help you?" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (name && email && message) {
+        alert("✅ Thank you, " + name + "! Your message has been received. We'll get back to you soon.");
+        this.reset();
+      } else {
+        alert("Please fill in all required fields.");
+      }
+    });
+  </script>
+
+<footer>
+  <div class="container">
+    <div class="social-links"><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a><a href="#" class="social-icon"><i class="fab fa-goodreads-g"></i></a></div>
+    <div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="excerpts.html">Excerpts</a><a href="#book">Book</a><a href="#healing">Healing</a><a href="contact-us.html">Contact</a></div>
+    <p>&copy; 2026 Mary K Espinosa — Shattered Roots to Stronger Wings. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+
+<script>
+  const hamburger = document.getElementById('hamburger'), sideMenu = document.getElementById('sideMenu'), overlayBlur = document.getElementById('overlayBlur'), closeMenu = document.getElementById('closeMenu');
+  function openSideMenu() { sideMenu.classList.add('active'); overlayBlur.classList.add('active'); }
+  function closeSideMenu() { sideMenu.classList.remove('active'); overlayBlur.classList.remove('active'); }
+  if (hamburger) hamburger.addEventListener('click', openSideMenu);
+  if (closeMenu) closeMenu.addEventListener('click', closeSideMenu);
+  overlayBlur.addEventListener('click', closeSideMenu);
+  document.querySelectorAll('.side-nav-links a').forEach(link => link.addEventListener('click', closeSideMenu));
+  
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#" || targetId === "") return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 30, behavior: "smooth" });
+        history.pushState(null, null, targetId);
+      }
+    });
+  });
+
+  const fadeEls = document.querySelectorAll('.about-grid, .memoir-luxury-card, .chapter-grid, .quote-master-card');
+  const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('appear'); observer.unobserve(entry.target); } }); }, { threshold: 0.1 });
+  fadeEls.forEach(el => { el.classList.add('fade-up'); observer.observe(el); });
+</script>
+    
+</body>
+</html>
